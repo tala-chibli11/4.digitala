@@ -348,7 +348,8 @@
             height: auto;
             border-radius: 6px;
             background: #fff;
-            border: 2px solid var(--accent);
+            /* border: 2px solid var(--accent); */
+            /* REMOVED */
             margin-bottom: 8px;
         }
 
@@ -451,7 +452,8 @@
         .project-photo-block img {
             background: var(--white);
             border-radius: 14px;
-            border: 2px solid var(--accent);
+            /* border: 2px solid var(--accent); */
+            /* REMOVED */
             max-width: 90%;
             margin: 0 auto;
             display: block;
@@ -501,7 +503,8 @@
             height: 56px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid var(--accent);
+            /* border: 2px solid var(--accent); */
+            /* REMOVED */
             background: var(--gray-dark);
         }
 
@@ -1055,6 +1058,12 @@
                         <div class="file-desc">Bas Pasta Menu – Crepeno</div>
                     </div>
                 </div>
+                <div class="file-card" id="open-modal-3">
+                    <div class="file-content">
+                        <div class="file-title">Product Photography & Digital Marketing Project</div>
+                        <div class="file-desc">Khait w Hkaya – YALA Association</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1117,6 +1126,34 @@
             </div>
         </div>
     </div>
+    <div id="project-modal-3" class="modal-overlay" style="display:none;">
+        <div class="modal-content">
+            <button class="close-modal" data-close="3">&times;</button>
+            <div class="project-container">
+                <div class="project-title">Product Photography & Digital Marketing Project</div>
+                <div class="project-company">Khait w Hkaya – YALA Association</div>
+                <div class="project-desc">
+                    <br>Role: Product Photographer & Digital Marketer</br>
+                    <br>Year: 2023</br>
+                    <br>• Photographed handmade products (bags, wallets, keychains) highlighting the Palestinian
+                    heritage
+                    style.</br>
+                    <br>• Conducted a professional photoshoot with multiple setups suitable for digital display.</br>
+                    <br>• Created visual content tailored for social media platforms.</br>
+                    <br>• Marketed the products online, increasing reach and engagement with the target audience.</br>
+
+                    <br>Skills gained:</br>
+                    <br>Photography · Visual Storytelling · Digital Marketing · Social Media Management</br>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-photo-block">
+                        <img src="https://imgur.com/0BO1tFS.jpg" alt="Logo Design">
+                        <div class="photo-caption">Khait w Hkaya Collection</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- MODAL SCRIPT -->
     <script>
         document.getElementById('open-modal-1').onclick = function () {
@@ -1124,6 +1161,9 @@
         };
         document.getElementById('open-modal-2').onclick = function () {
             document.getElementById('project-modal-2').style.display = 'flex';
+        };
+        document.getElementById('open-modal-3').onclick = function () {
+            document.getElementById('project-modal-3').style.display = 'flex';
         };
         document.querySelectorAll('.close-modal').forEach(function (btn) {
             btn.onclick = function () {
@@ -1135,6 +1175,9 @@
             if (e.target === this) this.style.display = 'none';
         };
         document.getElementById('project-modal-2').onclick = function (e) {
+            if (e.target === this) this.style.display = 'none';
+        };
+        document.getElementById('project-modal-3').onclick = function (e) {
             if (e.target === this) this.style.display = 'none';
         };
     </script>
